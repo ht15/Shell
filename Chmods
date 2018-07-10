@@ -1,0 +1,21 @@
+1.查看用户，用户组
+
+less /etc/passwd                  包含用户密码，用户组等信息
+less /etc/group       		  包含用户组及组内成员信息
+
+sudo adduser  name		  创建新用户
+sudo passwd   pwd		  更改用户密码
+
+vim /etc/sudoers		  添加用户name，使其能够sudo
+
+
+2.改变文件所属用户，用户组，以及文件属性
+
+chmod 777 txt    ==   chmod u=rwx,go=rwx
+改变文件属性 chmod u+w txt ;   chmod u-w txt
+
+
+sudo chown root txt   		文件txt所属用户改为root
+sudo chown :root txt            改变文件所属组
+
+sudo chgrp root txt             另一种改变文件所属组的方法
